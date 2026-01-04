@@ -1,0 +1,7 @@
+.container {
+  background-color: lightpink;
+  margin:40px;
+  padding:10px;
+  border:2px solid black;
+  border-radius:5px;
+}
