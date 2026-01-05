@@ -1,0 +1,106 @@
+<%- include('../partials/head')%>
+</head>
+<body class="min-h-screen bg-gray-100">
+<%- include('../partials/nav') %>
+    <h1 class="text-3xl font-bold text-blue-600 mb-6 text-center mt-8">Signup Here</h1>
+
+   <form 
+  action="/signup" 
+  method="POST"
+  class="flex flex-col items-center space-y-5"
+>
+<%- include('../partials/error-messages') %>
+
+    <input 
+      type="text"
+      name="firstName"
+      value="<%=typeof oldInput !== 'undefined' ? 
+      oldInput.firstName:'' %>"
+     
+      placeholder="FirstName"
+      class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg text-center bg-white "
+    />   
+    <input 
+      type="text"
+      name="lastName"
+           value="<%=typeof oldInput !== 'undefined' ? 
+      oldInput.lastName:'' %>"
+      placeholder="LastName"
+      class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg text-center bg-white "
+    />
+    <input 
+      type="email"
+      name="email"
+           value="<%=typeof oldInput !== 'undefined' ? 
+      oldInput.email:'' %>"
+      placeholder="Enter your Email "
+      class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg text-center bg-white "
+    />
+    <input 
+      type="password"
+      name="password"
+           value="<%=typeof oldInput !== 'undefined' ? 
+      oldInput.password:'' %>"
+      placeholder="Enter your password "
+      class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg text-center bg-white "
+    />
+    <input 
+      type="password"
+      name="confirm_password"
+           value="<%=typeof oldInput !== 'undefined' ? 
+      oldInput.confirm_password:'' %>"
+      placeholder="Confirm Password "
+      class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg text-center bg-white "
+    />
+
+    <!-- User Type Radio Buttons -->
+    <div class="w-1/2 flex items-center justify-center space-x-8 mt-2">
+      <label class="flex items-center space-x-2">
+      <input 
+  type="radio"
+  name="userType"
+  value="Guest"
+checked="<%= typeof oldInput !== 'undefined' && oldInput.userType === 'Guest' ? 'checked' :'' %>"
+  class="accent-blue-500"
+  required
+/>
+
+        <span class="text-gray-700 font-medium">Guest</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input 
+          type="radio"
+          name="userType"
+          value="Host"
+        checked="<%= typeof oldInput !== 'undefined' && oldInput.userType === 'Host' ? 'checked' :'' %>"
+          class="accent-blue-500"
+          required
+        />
+        <span class="text-gray-700 font-medium">Host</span>
+      </label>
+    </div>
+
+    <!-- Terms and Conditions Checkbox -->
+    <div class="w-1/2 flex items-center mt-2">
+      <input 
+        type="checkbox"
+        name="terms"
+        id="terms"
+        class="accent-blue-500"
+        required
+      />
+      <label for="terms" class="ml-2 text-sm text-gray-700">I agree to the 
+        <a href="#" class="text-blue-600 underline hover:text-blue-700">terms and conditions</a>
+      </label>
+    </div>
+
+    <div class="flex justify-center">
+      <input 
+        type="submit"
+        value="Signup"
+        class="bg-green-500 hover:bg-green-600 text-white font-semibold p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
+      >
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<%- include('../partials/head') %>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+  <!-- Navbar -->
+  <%- include('../partials/nav') %>
+
+  <main class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <!-- Title -->
+      <h1 class="text-4xl font-extrabold text-blue-600 mb-10 text-center tracking-tight">
+        Here is Your Home
+      </h1>
+
+      <!-- Card Container -->
+      <div class="bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+        <!-- Home Image -->
+        <img 
+          src="<%= home.photoUrl %>" 
+          alt="<%= home.houseName %>" 
+          class="w-full h-80 object-cover"
+        />
+
+        <!-- Home Info -->
+        <div class="p-8 space-y-4">
+          <h2 class="text-3xl font-semibold text-gray-900 text-center">
+            <%= home.houseName %>
+          </h2>
+
+          <div class="text-center space-y-1">
+            <p class="text-gray-600">
+              📍 <span class="font-medium"><%= home.location %></span>
+            </p>
+            <p class="text-gray-700">
+              💰 <span class="font-semibold text-gray-900">Rs <%= home.price %></span> / night
+            </p>
+            <p class="text-yellow-500 font-medium">
+              ⭐ <%= home.rating %> / 5
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t border-gray-200 my-4"></div>
+
+          <!-- Description (optional if available) -->
+          <% if (home.description) { %>
+            <p class="text-gray-700 leading-relaxed text-center">
+              <%= home.description %>
+            </p>
+          <% } %>
+
+          <!-- Add to Favourite Partial -->
+          <div class="pt-4 text-center">
+            <%- include('../partials/add-to-favourite', { home: home }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+

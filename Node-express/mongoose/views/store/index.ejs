@@ -1,0 +1,54 @@
+<%- include('../partials/head') %>
+</head>
+<body class="min-h-screen bg-gray-100">
+  <%- include('../partials/nav') %>
+
+  <main class="py-12 px-4">
+    <div class="container mx-auto max-w-7xl">
+      <h1 class="text-4xl font-bold text-blue-600 mb-8 text-center tracking-tight">
+        Welcome to Airbnb
+      </h1>
+
+      <!-- Flex container for cards -->
+      <div class="flex flex-wrap justify-center gap-8">
+        <% homes.forEach(home => { %>
+          <div class="bg-white shadow-lg rounded-2xl p-6 w-full sm:w-80 md:w-72 lg:w-80 
+                      hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+            
+            <!-- Home image -->
+            <img 
+              src="<%= home.photoUrl %>" 
+              alt="<%= home.houseName %>" 
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+
+            <!-- Home details -->
+            <h2 class="text-2xl font-semibold text-gray-900 mb-2 text-center">
+              <%= home.houseName %>
+            </h2>
+
+            <p class="text-gray-600 text-center mb-1">
+              📍 <%= home.location %>
+            </p>
+            <p class="text-gray-600 text-center mb-1">
+              💰 <span class="font-medium">Rs<%= home.price %></span> / night
+            </p>
+            <p class="text-yellow-500 text-center mb-4">
+              ⭐ <%= home.rating %> / 5
+            </p>
+
+            <div class="text-center">
+              <a 
+                href="/homes/<%= home._id %>" 
+                class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+              >
+                Book Now
+              </a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

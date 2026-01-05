@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Complete Coding",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss --i ./public/styles/input.css -o ./public/styles/output.css --watch",
+    "start": "concurrently \"npm run tailwind\" \"nodemon app.js\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "tailwindcss": "^4.1.16"
+  }
+}

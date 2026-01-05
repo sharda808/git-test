@@ -1,0 +1,33 @@
+<header class="bg-white shadow-lg border-b border-gray-200">
+  <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex space-x-6">
+      <a href="/" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">airbnb</a>
+
+      <% if (isLoggedIn) { %>
+       <% if(user.userType === 'Guest') { %>
+          <a href="/homes" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Homes</a>
+          <a href="/favourites" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Favourites</a>
+          <% } else { %>
+          <a href="/host/host-homes" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Host Homes</a>
+          <a href="/host/add-home" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Add Home</a>
+          <a href="/host/analytics" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Analytics</a>
+      <% } %>
+      
+        <% } %>
+
+    </div>
+    <!-- Right side login/logout -->
+    <div class="flex space-x-4">
+      <% if (isLoggedIn) { %>
+        <form action="/logout" method="POST">
+          <input type="submit" value="Logout" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105" />
+        </form>
+      <% } else { %>
+        <a href="/signup" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Signup</a>
+        <a href="/login" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Login</a>
+      <% } %>
+    </div>
+  </nav>
+</header>
+<!-- U5KX6VX2RCPG4P3TU1X4JYCF -->
