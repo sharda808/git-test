@@ -1,4 +1,4 @@
 
-i can be in main branch & ridoy-branch
+ i am in ridoy branch
+ Adding in ridoy branch
 
-hi, i am learning github
