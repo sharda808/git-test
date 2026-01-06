@@ -1,4 +1,5 @@
 import Sidebar from "./components/layout/Sidebar"
+import Payment from "./components/payment"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
    <h1>E-commerce-dashboard</h1>
    <Sidebar />
-
+<Payment />
 
     </>
   )
