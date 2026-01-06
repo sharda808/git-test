@@ -6,6 +6,7 @@ function App() {
     <>
    <h1>E-commerce-dashboard</h1>
    <Sidebar />
+  <p>This is powerfull dashboard</p>
     </>
   )
 }
