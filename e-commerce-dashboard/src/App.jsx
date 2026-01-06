@@ -6,7 +6,7 @@ function App() {
     <>
    <h1>E-commerce-dashboard</h1>
    <Sidebar />
-
+<h2>HI sharda</h2>
     </>
   )
 }
