@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
  i am in ridoy branch
  Adding in ridoy branch
 
 hi
+=======
+ i am in ridoy branch
+ Adding in ridoy branch
+>>>>>>> 2b32fe2 (My change is awesome)
