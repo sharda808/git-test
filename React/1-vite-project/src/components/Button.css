@@ -1,0 +1,24 @@
+.red_button {
+  background-color:red;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor:pointer;
+}
+.blue_button {
+  background-color: blue;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor:pointer;
+}
+.green_button {
+  background-color: green;
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor:pointer;
+}

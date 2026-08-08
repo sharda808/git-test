@@ -1,9 +1,11 @@
+import Graduation from "./Graduation";
 import Section from "./Section";
 import { BookOpen } from 'lucide-react';
 const Education = () => {
 return (
 <Section  icon = {<BookOpen />}  sectionTitle="Education" >
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad nemo rerum?</p>
+  <Graduation title ="Bachelor of Science in Computer Science"  school = "University of Technology" year = "2015-2019"/>
+   <Graduation title ="Full Stack Development Bootcamp"  school = "Code Academy" year = "2020"/>
   </Section>
 )
 }

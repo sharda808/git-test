@@ -6,7 +6,8 @@ import Education from './components/Education'
 import Extracurricular from './components/Extracurricular'
 import Header from './components/Header'
 import Hobbies from './components/Hobbies'
-import Projects from './components/Projetcs'
+import Projects from './components/project/Projetcs'
+
 import Skills from './components/Skills'
 
 function App() {

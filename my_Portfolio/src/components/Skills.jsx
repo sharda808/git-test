@@ -5,7 +5,7 @@ const Skills = () => {
 
   const skillTitles = ["JavaScript","React","Node.js","Python","SQL","GiT","AWS","Docker"];
    return <Section  icon = {<Code/>}  sectionTitle="Skills" >
-    {skillTitles.map(title => <Pill title = {title} />)}
+    {skillTitles.map(title => <Pill key = {title} title = {title} />)}
 
   </Section>
 
